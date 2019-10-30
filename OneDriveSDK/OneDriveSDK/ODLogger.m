@@ -78,6 +78,6 @@
 
 - (void)writeMessage:(NSString *)message
 {
-    L4A_NSLog(@"%@", message);
+    OD_NSLog(@"%@", message);
 }
 @end
