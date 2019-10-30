@@ -36,13 +36,6 @@
  
  */
 
-#ifdef L4A_RND
-#define OD_NSLog(__FORMAT__, ...) L4A_NSLog(__FORMAT__, ##__VA_ARGS__)
-#else
-#define OD_NSLog(__FORMAT__, ...) NSLog(__FORMAT__, ##__VA_ARGS__)
-#endif
-
-
 
 
 @interface ODLogger : NSObject <ODLogger>
