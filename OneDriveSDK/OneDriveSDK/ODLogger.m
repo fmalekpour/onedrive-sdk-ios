@@ -22,6 +22,7 @@
 
 #import "ODLogger.h"
 #include <stdarg.h>
+#import <FarhadLibraryFramework/FarhadLibraryFramework.h>
 
 
 @implementation ODLogger
@@ -78,6 +79,6 @@
 
 - (void)writeMessage:(NSString *)message
 {
-    OD_NSLog(@"%@", message);
+    L4A_NSLog(@"%@", message);
 }
 @end
