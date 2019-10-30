@@ -77,6 +77,6 @@
 
 - (void)writeMessage:(NSString *)message
 {
-    NSLog(@"%@", message);
+    L4A_NSLog(@"%@", message);
 }
 @end
