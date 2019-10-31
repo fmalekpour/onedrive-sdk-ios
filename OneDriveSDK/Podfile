@@ -9,23 +9,3 @@ end
 target 'OneDriveSDKTests' do
     pod 'OCMock'
 end
-
-def append_header_search_path(target, path)
-    target.build_configurations.each do |config|
-        # Note that there's a space character after `$(inherited)`.
-        config.build_settings["HEADER_SEARCH_PATHS"] ||= "$(inherited) "
-        config.build_settings["HEADER_SEARCH_PATHS"] << path
-    end
-end
-
-pre_install do |installer|
-    installer.pods_project.targets.each do |target|
-        append_header_search_path(target, "${FARHADLIBRARY_FRW}")
-        if target_name == "OneDriveSDK"
-            target.build_configurations.each do |config|
-                # Note that there's a space character after `$(inherited)`.
-                config.build_settings["MACH_O_TYPE"] = "staticlib"
-            end
-        end
-    end
-end
